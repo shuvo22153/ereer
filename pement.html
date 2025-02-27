@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .payment-form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 450px;
+    }
+    .payment-form h2 {
+      text-align: center;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-size: 14px;
+      color: #555;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .payment-methods {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+    .payment-methods img {
+      width: 40px;
+      height: 40px;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-form">
+    <h2>Complete Payment</h2>
+    <form id="paymentForm">
+      
+      <!-- Card Information -->
+      <div class="form-group">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9876 5432" required>
+      </div>
+
+      <div class="form-group">
+        <label for="expiry-date">Expiry Date</label>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+      </div>
+
+      <div class="form-group">
+        <label for="card-holder-name">Card Holder's Name</label>
+        <input type="text" id="card-holder-name" name="card-holder-name" placeholder="John Doe" required>
+      </div>
+
+      <!-- Country Selection -->
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="uk">United Kingdom</option>
+          <option value="bd">Bangladesh</option>
+          <option value="in">India</option>
+        </select>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="form-group">
+        <label for="payment-method">Choose Payment Method</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="visa">Visa</option>
+          <option value="mastercard">MasterCard</option>
+          <option value="american-express">American Express</option>
+          <option value="paypal">PayPal</option>
+          <option value="binance">Binance</option>
+        </select>
+      </div>
+
+      <!-- Payment Icons -->
+      <div class="payment-methods">
+        <img src="visa-logo.jpg" alt="Visa">
+        <img src="mastercard-logo.jpg" alt="MasterCard">
+        <img src="american-express-logo.jpg" alt="American Express">
+        <img src="paypal-logo.jpg" alt="PayPal">
+        <img src="binance-logo.jpg" alt="Binance">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Complete Payment</button>
+    </form>
+  </div>
+
+</body>
+</html>
